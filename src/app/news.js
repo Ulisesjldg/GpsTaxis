@@ -16,14 +16,3 @@ module.exports = app => {
     });
 }
 
-// valores de la pagina y los pasa a base de datos
-
-app.post('/agregar'), (req,res) => {
-
-    const {Latitud, Longitud, Timmestamp} = req.body;
-    Connection.query('INSERT INTO DATOS SET?'), {
-        Latitud, Longitud, Timmestamp
-    }, (err, result) => {
-        res.redirect('/'); 
-    }
-}
